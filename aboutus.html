@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urbanlove Investment</title>
+    
+    <!-- INTERNAL CSS (Matches your Shop Page) -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Header & Home Image Button Styling */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .home-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .home-btn img {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            transition: transform 0.2s;
+        }
+
+        .home-btn img:hover {
+            transform: scale(1.1);
+        }
+
+        /* About Us Main Container */
+        .about-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .about-container img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .about-container h2 {
+            color: #222;
+            margin-bottom: 15px;
+        }
+
+        .about-container p {
+            line-height: 1.6;
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        /* Action Button */
+        .shop-btn {
+            background-color: #3B1608;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+
+        .shop-btn:hover {
+            background-color: #D99A24;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER WITH HOME BUTTON IMAGE -->
+    <header>
+        <!-- Use the exact same Home icon/logo as your main page -->
+        <button class="home-btn" onclick="goHome()" title="Go to Home Page">
+            <img src="images/Urbanlove Investment Coffee Emblem.png" alt="Home Button">
+        </button>
+        <h1>About Us</h1>
+        <div style="width: 50px;"></div> <!-- Spacer to keep title centered -->
+    </header>
+
+    <!-- ABOUT US CONTENT -->
+    <div class="about-container">
+        <!-- Optional Banner Image: Replace with a photo of your store, team, or products -->
+        <img width="500px" src="images/Urbanlove Investment Coffee Emblem.png" alt="About Our Store">
+        
+        <h2>Welcome to My Online Store</h2>
+        
+        <p>
+            We started this store with a simple mission: to provide high-quality products at affordable prices with a seamless shopping experience. Every item in our collection is carefully selected to ensure it meets our standards for quality and value.
+        </p>
+        
+        <p>
+            Customer satisfaction is at the heart of everything we do. Whether you are browsing our latest arrivals or picking up an everyday essential, we are here to make sure you get exactly what you need.
+        </p>
+
+        <button class="shop-btn" onclick="goHome()">Back to Shopping</button>
+    </div>
+
+    <!-- INTERNAL JAVASCRIPT -->
+    <script>
+        // Redirects back to your main shop/home page
+        function goHome() {
+            window.location.href = "index.html"; 
+        }
+    </script>
+
+</body>
+</html>

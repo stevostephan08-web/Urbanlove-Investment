@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urbanlove Investment</title>
+    
+    <!-- INTERNAL CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+
+        /* Header & Home Image Button Styling */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .home-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .home-btn img {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            transition: transform 0.2s;
+        }
+
+        .home-btn img:hover {
+            transform: scale(1.1);
+        }
+
+        .about {
+            right: 0px;
+            top: 0px;
+            width: 100px;
+            height: 30px;
+            background-color: #ffffff;
+            border-radius: 100px;
+        }
+
+        .about:hover{
+            background-color: #D99A24;
+        }
+
+
+        /* Product Grid Styling */
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 15px;
+            width: 200px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product-card img {
+            width: 200px;
+            height: 200px;
+            object-fit: scale-down;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .product-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* Purchase Button Styling */
+        .buy-btn {
+            background-color: #3B1608;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+
+        .buy-btn:hover {
+            background-color: #D99A24;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER WITH HOME BUTTON IMAGE -->
+    <header>
+        <!-- Replace 'home-icon.png' with your own logo or home image -->
+        <button class="home-btn" onclick="goHome()" title="Go to Home Page">
+            <img src="images/Urbanlove Investment Coffee Emblem.png" alt="Home Button">
+        </button>
+        <h1>Urbanlove Investment</h1>
+        <button class="about" onclick="goAbout()">aboutus</button>
+        <div style="width: 50px;"></div> <!-- Spacer to keep title centered -->
+    </header>
+
+    <!-- 5 PRODUCTS SECTION -->
+    <div class="product-grid">
+        
+        <!-- Item 1 -->
+        <div class="product-card">
+            <!-- Replace src with your image path (e.g., "images/item1.jpg") -->
+            <img width="50px" height="50px" src="images/download15.png" alt="Product 1">
+            <div class="product-title">Americano</div>
+            <button class="buy-btn" onclick="makePurchase('Americano @ Ksh 300')"> Ksh 300 </button>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="product-card">
+            <img src="images/download18.png" alt="Product 2">
+            <div class="product-title">Latte</div>
+            <button class="buy-btn" onclick="makePurchase('Latte @ Ksh 320')">Ksh 320</button>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="product-card">
+            <img src="images/download13.png" alt="Product 3">
+            <div class="product-title">Expresso</div>
+            <button class="buy-btn" onclick="makePurchase('Expresso @ Ksh 240')">Ksh 240</button>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="product-card">
+            <img src="images/download11.png" alt="Product 4 ">
+            <div class="product-title">Cappucino</div>
+            <button class="buy-btn" onclick="makePurchase('Cappucino @ Ksh 340')">Ksh 340</button>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="product-card">
+            <img src="images/download14.png" alt="Product 5">
+            <div class="product-title">Mocha</div>
+            <button class="buy-btn" onclick="makePurchase('Mocha @ Ksh 400')">Ksh 400</button>
+        </div>
+
+    </div>
+
+    <!-- INTERNAL JAVASCRIPT -->
+    <script>
+        // Function triggered when any Purchase button is clicked
+        function makePurchase(itemName) {
+            alert("Success! A purchase has been made for: " + itemName);
+        }
+
+        // Function triggered when the Home image button is clicked
+        function goHome() {
+            // Change 'index.html' to your actual home page URL or file name
+            window.location.href = "index.html"; 
+        }
+
+         function goAbout() {
+            window.location.href = "aboutus.html";
+        }
+    </script>
+
+</body>
+</html>
